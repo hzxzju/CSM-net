@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lazystrike-classification"
+version = "0.1.0"
+description = "DINOv3 SEM classification with LazyStrike pseudo-mask positional attention"
+requires-python = ">=3.10"
+dependencies = [
+  "torch>=2.4",
+  "torchvision>=0.19",
+  "transformers>=4.56.0",
+  "Pillow>=9.2",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+ocr = ["numpy>=1.26", "opencv-python-headless>=4.8", "pytesseract>=0.3.13"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+outputs/
+tmp/
+CSM_Dataset/
+image/
+micro_sam/
+new_images/
+seg_class2026整合版/
+ubuntu-latest_x86_64/
